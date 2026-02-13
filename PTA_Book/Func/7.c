@@ -20,8 +20,9 @@ int main()
 }
 
 int prime(int x) {
-    x = (x > 0 ? x : -x);
-    if (x == 1) {
+    if (x <= 0) {
+        return 0;
+    } else if (x == 1) {
         return 0;
     } else if (x == 2) {
         return 1;
@@ -35,7 +36,6 @@ int prime(int x) {
         }
         return 1;
     }
-    return 0;
 }
 
 int PrimeSum(int m, int n) {
